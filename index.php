@@ -63,124 +63,14 @@
   <body>
     <div id="app">
       <div class="main-wrapper main-wrapper-1">
-        <div class="navbar-bg"></div>
-        <nav class="navbar navbar-expand-lg main-navbar">
-          <form class="form-inline mr-auto">
-            <ul class="navbar-nav mr-3">
-              <li>
-                <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"
-                  ><i class="fas fa-bars"></i
-                ></a>
-              </li>
-            </ul>
-          </form>
-          <ul class="navbar-nav navbar-right">
-            <li class="dropdown">
-              <a
-                href="#"
-                data-toggle="dropdown"
-                class="nav-link dropdown-toggle nav-link-lg nav-link-user"
-              >
-                <img
-                  alt="image"
-                  src="assets/img/avatar/avatar-1.png"
-                  class="rounded-circle mr-1"
-                />
-                <div class="d-sm-none d-lg-inline-block">
-                 Hi, 
-                  <?php
-                    echo $usr['first_name'] . " " . $usr['last_name'];
-                  ?>
-                </div></a
-              >
-              <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-title">Logged in 5 min ago</div>
-                <a href="features-profile.html" class="dropdown-item has-icon">
-                  <i class="far fa-user"></i> Profile
-                </a>
-                <a
-                  href="features-activities.html"
-                  class="dropdown-item has-icon"
-                >
-                  <i class="fas fa-bolt"></i> Activities
-                </a>
-                <a href="features-settings.html" class="dropdown-item has-icon">
-                  <i class="fas fa-cog"></i> Settings
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="logout.php" class="dropdown-item has-icon text-danger">
-                  <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <div class="main-sidebar sidebar-style-2">
-          <aside id="sidebar-wrapper">
-            <div class="sidebar-brand">
-              <a href="index.html">Stisla</a>
-            </div>
-            <div class="sidebar-brand sidebar-brand-sm">
-              <a href="index.html">St</a>
-            </div>
-            <ul class="sidebar-menu">
-              <li class="menu-header">Dashboard</li>
-              <li>
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-fire"></i><span>Dashboard</span></a
-                >
-              </li>
-              <li class="menu-header">Data Master</li>
-              <li class="dropdown">
-                <a href="#" class="nav-link" data-toggle="dropdown"
-                  ><i class="fas fa-star"></i> <span>Penjualan</span></a
-                >
-              </li>
-              <li>
-                <a class="nav-link" href="blank.html"
-                  ><i class="far fa-file-alt"></i> <span>Produk</span></a
-                >
-              </li>
-              <li class="dropdown">
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-users"></i> <span>Pelanggan</span></a
-                >
-              </li>
-              <li class="menu-header">Stok</li>
-              <li class="dropdown">
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-th-large"></i> <span>Stok Masuk</span></a
-                >
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-th-large"></i> <span>Stok Keluar</span></a
-                >
-              </li>
-              <li class="menu-header">Laporan</li>
-                 <li>
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-fire"></i><span>Laporan</span></a
-                >
-              </li>
-               <li class="menu-header">Kasir</li>
-              <li>
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-fire"></i><span>Kasir</span></a
-                >
-              </li>
-               <li class="menu-header">Pengaturan</li>
-                <li>
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-fire"></i><span>Pengguna</span></a
-                >
-              </li>
-               <li>
-                <a href="#" class="nav-link"
-                  ><i class="fas fa-fire"></i><span>Pengaturan</span></a
-                >
-              </li>
-            </ul>
-          </aside>
-        </div>
+
+      <?php
+          include "./layouts/header.php"
+        ?>
+
+        <?php
+          include "./layouts/sidebar.php"
+        ?>
 
         <!-- Main Content -->
         <div class="main-content">
@@ -831,14 +721,9 @@
             </div>
           </section>
         </div>
-        <footer class="main-footer">
-          <div class="footer-left">
-            Copyright &copy; 2018
-            <div class="bullet"></div>
-            Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-          </div>
-          <div class="footer-right">Comprehensive web development masterclass - Binus Center  Copyright &copy; Sept 2025</div>
-        </footer>
+        <?php
+          include "./layouts/footer.php"
+        ?>
       </div>
     </div>
 
